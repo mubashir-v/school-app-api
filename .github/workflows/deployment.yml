@@ -22,7 +22,7 @@ jobs:
           script: |
             cd /var/www/backend-school-app/school-app-api
             git stash
-            git pull origin dev-master
+            git pull origin main
             nvm use 22
             npm install
             pm2 restart school-app-api
