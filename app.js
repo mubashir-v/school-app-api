@@ -2,8 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT ||  3000;
-
+const port = process.env.PORT || 3000;
+const apiRoutes = require("./src/routes/api");
 require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -12,9 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // Example route
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
+app.use("/", apiRoutes);
 
 // Start the server
 app.listen(port, () => {
