@@ -131,3 +131,4 @@ dist
 firbaseKey.json
 src/services/auth/firebase/key.js
 key.js
+key.json
