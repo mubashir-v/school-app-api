@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const LoginSchema = new mongoose.Schema({
   uid: { type: String, required: true, unique: true }, // Firebase UID
   email: { type: String, required: true, unique: true },
+  password_hint :{ type: String, required: false },
   name: { type: String },
   profilePic: { type: String },
   isAdmin: { type: Boolean, default: false },

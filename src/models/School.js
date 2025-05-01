@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const SchoolSchema = new mongoose.Schema({
   name: { type: String, required: true },
   address: { type: String },
-  phone:{ type: String, required: true },
+  principal: { type: String },
+  contact:{ type: String, required: true },
   login: { type: mongoose.Schema.Types.ObjectId, ref: "Login", required: true }, // Foreign Key to Login
   createdAt: { type: Date, default: Date.now },
 });
