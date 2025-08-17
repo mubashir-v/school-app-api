@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   next();
 });
 // Example route
-app.use("", apiRoutes);
+app.use("/api", apiRoutes);
 
 // Start the server
 app.listen(port, () => {
