@@ -23,7 +23,6 @@ jobs:
             cd /var/www/school-app-api
             git stash
             git pull origin main
-            nvm use 22
             npm install
             pm2 restart school-app-api
             sudo systemctl reload nginx
