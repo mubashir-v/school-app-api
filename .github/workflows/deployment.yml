@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /var/www/backend-school-app/school-app-api
+            cd /var/www/school-app-api
             git stash
             git pull origin main
             nvm use 22
